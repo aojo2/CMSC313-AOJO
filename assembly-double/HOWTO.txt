@@ -1,0 +1,38 @@
+CMSC 313 Project 2 - double
+Anthony Ojo (aojo2)
+
+Files
+-----
+double.s    GAS assembly source
+HOWTO.txt   this file
+
+Build (on gl.umbc.edu)
+----------------------
+gcc -m32 -no-pie -o double double.s
+
+Run
+---
+./double
+Enter a number: 5
+The double is: 10
+
+Example sessions
+----------------
+$ ./double
+Enter a number: 17
+The double is: 34
+
+$ ./double
+Enter a number: 0
+The double is: 0
+
+$ ./double
+Enter a number: -8
+The double is: -16
+
+Notes
+-----
+- Reads the integer from stdin via scanf.
+- Doubles the value with addl %eax, %eax (n + n).
+- Prints the result with printf.
+- 32-bit x86 GAS syntax, linked against the C runtime via gcc -m32.
